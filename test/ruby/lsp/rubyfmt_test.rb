@@ -19,7 +19,7 @@ module RubyLsp
           end
         RUBY
 
-        output = RubyLspRubyfmt::RubyFmtFormatterRunner.instance.run("", doc)
+        output = RubyLspRubyfmt::RubyFmtFormatterRunner.instance.run_formatting("", doc)
 
         assert_equal(<<~RUBY, output)
           class Foo
